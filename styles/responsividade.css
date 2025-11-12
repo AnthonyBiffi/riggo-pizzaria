@@ -1,0 +1,60 @@
+/* Responsividade para celular (largura < 600px) */
+@media (max-width: 600px) {
+  .login-container {
+    padding: 20px; /* Padding menor */
+    width: 80%; /* Mais largo em telas pequenas */
+  }
+
+  h1 {
+    font-size: 20px; /* Fonte menor */
+  }
+
+  input,
+  button[type="submit"] {
+    font-size: 14px; /* Ajuste de fonte */
+    padding: 8px; /* Padding menor */
+  }
+
+  .theme-toggle {
+    width: 40px; /* Botão menor */
+    height: 40px;
+    font-size: 16px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .links {
+    flex-direction: column; /* Links em coluna */
+    gap: 10px;
+  }
+
+  .dark-theme {
+  --bg-color: linear-gradient(
+    to bottom,
+    #333,#111); /* Escuro: gradiente escuro */
+  --container-bg: rgba(34, 34, 34, 0.9);
+  --text-color: #ccc;
+  --h1-color: #c20000; /* Vermelho mais claro para escuro */
+  --button-bg: #ff6600;
+  --button-hover: #cc5500;
+  --link-color: #66b3ff;
+
+  
+  background-image: url(../assets/imgs/logo-black.jfif);
+  backdrop-filter: blur(30px);
+  height: 770px;
+  background-size: contain; /* encaixa inteira no elemento */
+  background-size: cover; /* cobre o elemento inteiro */
+  background-position: center;
+  background-image: url(../assets/imgs/logo-black.jfif);
+  backdrop-filter: blur(30px);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s; /* Transição suave */
+}
+}
