@@ -1,14 +1,13 @@
-// Alternância de tema
+
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
 
-// Carrega o tema salvo no localStorage
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') {
     body.classList.add('dark-theme');
-    themeToggle.textContent = '☀️'; // Ícone para claro
+    themeToggle.textContent = '☀️'; 
 } else {
-    themeToggle.textContent = '🌙'; // Ícone para escuro
+    themeToggle.textContent = '🌙'; 
 }
 
 themeToggle.addEventListener('click', () => {
@@ -18,7 +17,6 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 
-// Formulário de login
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -31,7 +29,6 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         return;
     }
 
-    // Placeholder para envio ao banco de dados
     fetch('/api/login', {
         method: 'POST',
         headers: {
@@ -53,15 +50,20 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     });
 });
 
-// Links "Esqueceu a senha?" e "Criar conta"
 document.getElementById('forgotPassword').addEventListener('click', function(event) {
     event.preventDefault();
     alert('Funcionalidade de recuperação de senha em desenvolvimento. Redirecione para /forgot-password.');
-    // Substitua por: window.location.href = '/forgot-password';
+
 });
 
 document.getElementById('createAccount').addEventListener('click', function(event) {
     event.preventDefault();
     alert('Funcionalidade de criação de conta em desenvolvimento. Redirecione para /register.');
-    // Substitua por: window.location.href = '/register';
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("/api/teste")
+    .then(res => res.json())
+    .then(data => console.log("Conexão SAP HANA OK:", data))
+    .catch(err => console.error("Erro na conexão:", err));
 });

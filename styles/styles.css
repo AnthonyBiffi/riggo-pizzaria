@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap');
 
-:root {
-  --bg-color: linear-gradient(to bottom,#ffcccc,#ffff99); /* Claro: gradiente vermelho-claro para amarelo */
-  --container-bg: rgba(255, 255, 255, 0.9);
-  --text-color: #555;
-  --h1-color: #d32f2f;
-  --button-bg: #ff9800;
-  --button-hover: #e68900;
-  --link-color: #007bff;
-}
-
 .rubik {
   font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
