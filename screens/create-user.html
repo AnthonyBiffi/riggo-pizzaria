@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta</title>
+    <link rel="stylesheet" href="/screens/create-user.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Criar Conta</h2>
+        <form id="createForm">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required minlength="6">
+            
+            <button type="submit">Criar Conta</button>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script src="create-user.js"></script>
+</body>
+</html>

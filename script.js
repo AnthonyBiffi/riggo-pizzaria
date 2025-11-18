@@ -29,13 +29,11 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         return;
     }
 
-    fetch('/api/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password }),
-    })
+fetch('http://localhost:3000/api/login', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ username, password })
+})
     .then(response => response.json())
     .then(data => {
         if (data.success) {
@@ -52,17 +50,16 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
 document.getElementById('forgotPassword').addEventListener('click', function(event) {
     event.preventDefault();
-    alert('Funcionalidade de recuperação de senha em desenvolvimento. Redirecione para /forgot-password.');
-
+   window.location.href = '/screens/forgot-pasword.html';
 });
 
 document.getElementById('createAccount').addEventListener('click', function(event) {
     event.preventDefault();
-    alert('Funcionalidade de criação de conta em desenvolvimento. Redirecione para /register.');
+    window.location.href = '/screens/create-user.html';
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("/api/teste")
+fetch("http://localhost:3000/api/teste")
     .then(res => res.json())
     .then(data => console.log("Conexão SAP HANA OK:", data))
     .catch(err => console.error("Erro na conexão:", err));
