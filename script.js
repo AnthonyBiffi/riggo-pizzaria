@@ -64,3 +64,4 @@ fetch("http://localhost:3000/api/teste")
     .then(data => console.log("Conexão SAP HANA OK:", data))
     .catch(err => console.error("Erro na conexão:", err));
 });
+
