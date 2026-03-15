@@ -1,0 +1,162 @@
+type: collection.insomnia.rest/5.0
+name: riggo server
+meta:
+  id: wrk_25c9fbf4c7b445ef926789901e0a8272
+  created: 1763041802820
+  modified: 1763041834636
+  description: ""
+collection:
+  - url: "{{ _.base_url }}/users"
+    name: catch
+    meta:
+      id: req_9657d4d3421a479faae19d8cfffcb975
+      created: 1763041802830
+      modified: 1763404328175
+      isPrivate: false
+      description: ""
+      sortKey: -1763041802830
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.base_url }}/users/92e11c78-db19-4fef-ba6d-e24b0768fcfd"
+    name: delete
+    meta:
+      id: req_4efdc2a2400e4716b9c787864dd65b2c
+      created: 1763123659559
+      modified: 1763577725327
+      isPrivate: false
+      description: ""
+      sortKey: -1763123659559
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/12.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.base_url }}/users"
+    name: create
+    meta:
+      id: req_f3775e50f968426da02c69fd258b0c32
+      created: 1763123689250
+      modified: 1763571656465
+      isPrivate: false
+      description: ""
+      sortKey: -1763123689250
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "name": "Rodrigo",
+        	"email": "Rodrigo@gmail.com",
+        	"password": "Rodrigochefe"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.base_url }}/users/5dbe95cc-3c4c-4922-a8be-bd45e6afed3a"
+    name: update
+    meta:
+      id: req_d92ffc88972c41258c71a3d4fd7005ce
+      created: 1763123703162
+      modified: 1763747149174
+      isPrivate: false
+      description: ""
+      sortKey: -1763123703162
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+        "name": "trusted solutions",
+        "email": "emailcriptografado@gmail.com",
+        "password": "SenhaNova"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.base_url }}/api/login"
+    name: login
+    meta:
+      id: req_6219ee324be340b3b5d155b3761b72b7
+      created: 1763405391640
+      modified: 1763577496714
+      isPrivate: false
+      description: ""
+      sortKey: -1763405391640
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "username": "trustedd@gmail.com",
+          "password": "@Trusted"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.0.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_55d294e79ed6be10d6a29ebf413207f1ccfcfe50
+    created: 1763041802824
+    modified: 1763041802824
+environments:
+  name: Base Environment
+  meta:
+    id: env_55d294e79ed6be10d6a29ebf413207f1ccfcfe50
+    created: 1763041802822
+    modified: 1763041948855
+    isPrivate: false
+  data:
+    base_url: http://localhost:3000

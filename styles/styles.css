@@ -47,7 +47,7 @@ body {
   align-items: center;
   height: 100vh;
   color: var(--text-color);
-  transition: background 0.3s, color 0.3s; /* Transição suave */
+  transition: background 0.3s, color 0.3s; 
 }
 
 .theme-toggle {

@@ -35,7 +35,6 @@ document.getElementById('createForm').addEventListener('submit', async function(
             return;
         }
 
-        // Sucesso
         message.textContent = "Conta criada com sucesso!";
         message.style.color = "green";
 
